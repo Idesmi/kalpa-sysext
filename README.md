@@ -79,8 +79,8 @@ For SELinux support, this needs to run as `root`.
 
 There is a project which builds sysext images for openSUSE MicroOS:
 
-* Project: https://build.opensuse.org/project/show/home:kukuk:sysext
-* Download: https://download.opensuse.org/repositories/home:/kukuk:/sysext/mkosi/
+* Project: https://build.opensuse.org/project/show/devel:microos:sysext
+* Download: https://download.opensuse.org/tumbleweed/appliances/
 
 ## Open Questions
 * Call systemd-sysupdate refresh
