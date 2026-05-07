@@ -1,0 +1,12 @@
+#!/bin/bash -x
+
+echo "mkosi.postinst ${SUBIMAGE}" "$@"
+
+EXTENSION="${SUBIMAGE}-${IMAGE_VERSION}.${ARCHITECTURE}"
+mkdir -p /buildroot/usr/lib/extension-release.d/
+# Since rke2 is statically linked, run it on any distribution/version
+echo "ID=_any" >> /buildroot/usr/lib/extension-release.d/extension-release.${EXTENSION}
+
+# Reload systemd to update information about rke2 services
+echo "EXTENSION_RELOAD_MANAGER=1" >> /buildroot/usr/lib/extension-release.d/extension-release.${EXTENSION}
+
